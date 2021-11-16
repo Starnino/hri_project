@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      function get_robot() {
+        $.get("/", {"action": "robot"}).done(function(data) {
+          if (data == 'true') document.getElementById("true_btn").click();
+          else if (data == 'false') document.getElementById("false_btn").click();
+          else return
+        });
+      }
+
+      setInterval(get_robot, 1000);
+        
+    </script>
+    <title>Pepper Game</title>
+  </head>
+  <style>
+    div {
+    text-align: center;
+    border: 20px solid black;
+    width: 90%;
+    height: 85%;}
+    p {
+    font-family: "Monaco", "Courier New", monospace;
+    font-size: 20px;
+    }
+    input {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    }
+  </style>
+  <body>
+    <div>
+      <p> {{ question }} </p>
+      <form method="post" action="/">
+        <input style="background-color: #4CAF50;" id="true_btn" type="submit" value="true" name="button"/>
+        <input style="background-color: #f44336;" id="false_btn" type="submit" value="false" name="button" />
+      </form>
+    </div>
+  </body>
+<html>

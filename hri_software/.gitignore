@@ -1,0 +1,7 @@
+*~
+*.bak
+src
+catkin_ws
+docker/downloads/*.tar.gz
+docker/downloads/*.zip
+
