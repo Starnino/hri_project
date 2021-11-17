@@ -7,7 +7,7 @@ Humanoid robots are becoming more and more a thing close to reality rather than 
 ## The project
 The Python project implementation includes different modules for allowing a simulated interaction between the Pepper Robot and a Human (through the terminal):
 - **application.py**: main application flow, which represents the high level interaction.
-- **pepper.py**: high level functions which perform some high level robot behaviors.
+- **pepper.py**: high level functions which perform some high level robot behaviours.
 - **fer.py**: face emotion recognition system implemented in tensorflow.
 - **server.py**: flask Server used to play a simple true or false game (simulating the Pepper tablet). The relative templates are in the homonymous folder.
 - **human_say.py** and **touch_sim.py**: python scripts used as communication methods from human to Pepper robot.
